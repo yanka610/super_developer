@@ -1,12 +1,22 @@
 
 
-angular.module("myApp", [])
+angular.module("myApp", ['ngRoute', 'registration'])
+.config(function($routeProvider) {
+    $routeProvider.
+        when('/signin', {
+            templateUrl: 'template/singin.html',
+            controller: 'mainController'
+        })
+        .otherwise({
+            redirectTo:'/signin'
+        })
+})
 
 .controller("mainController", function($scope, $http){
    $scope.test="test";
 
    $scope.addUser = function() {
-    $http.get('/user',  { 'message' : 'ffffff' }).then(function(result){
+    $http.get('/test').then(function(result){
         console.log(result);
     });
    }

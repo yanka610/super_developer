@@ -6,8 +6,8 @@ var controller = require('./controller');
 router.get('/', function(req, res, next) {
   res.render('register.ejs');
 });
-
-router.get('/user', controller.addUser);
+router.get('/test', controller.test);
+router.get('/usr', controller.addUser);
 
 
 
