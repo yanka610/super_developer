@@ -1,8 +1,48 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
 
 a {
   color: #00B7FF;
 }
+
+.registration{
+  background-color: black;
+  
+  width: 500px;
+  height: 250px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+    color: white;
+}
+
+.logPass{
+  padding-left: 20px;
+}
+
+
+.button{
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+
+.bg{
+  background-color: black;
+  color: white;
+}
+
+@font-face {
+  font-family:'transform'; 
+  src: url('stylesheets/fonts/transform.ttf');
+  } 
+
+  @font-face {
+    font-family:'jocke'; 
+    src: url('stylesheets/fonts/jocke.ttf');
+    } 
+
+  

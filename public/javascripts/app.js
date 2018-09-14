@@ -1,6 +1,6 @@
 
 
-angular.module("myApp", ['ngRoute', 'registration'])
+angular.module("myApp", ['ngRoute', 'registration','car','description'])
 .config(function($routeProvider) {
     $routeProvider.
         when('/signin', {
