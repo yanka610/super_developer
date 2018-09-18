@@ -7,7 +7,8 @@ router.get('/', function(req, res, next) {
   res.render('register.ejs');
 });
 router.get('/test', controller.test);
-router.get('/usr', controller.addUser);
+router.post('/user', controller.addUser);
+router.get('/getUser', controller.getUser);
 
 
 
