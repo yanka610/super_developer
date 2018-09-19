@@ -1,21 +1,24 @@
 <div class="login_main" ng-show="!form">
 
     <div class="login_form">
-            <h5><b>Welcome</b></h5>                
+                <h2 style="text-align:center">
+                                <b>Welcome</b>
+                        </h2>                
               <div class="row">
                 <div class="col-sm-3" style="text-align: right">
                         <p> Login:  </p>
                         <p> Password:  </p>
                 </div>
                 <div class="col-sm-3">
-                        <input type="text" placeholder="login">
-                        <input style="margin-top: 5px" type="password" placeholder="password">
+                        <input ng-model="login" type="email" placeholder="email">
+                        <input ng-model="password" style="margin-top: 5px" type="password" placeholder="password">
                 </div>
               </div>
             <p style="text-align: center"><input  type="checkbox" name="remember" id="">  Remember me</p>
-
-    <a  href="#!main" class="btn btn-primary btn-sm">Log in</a>
+<p style="text-align: center">    <a  href="#!main" ng-click="logIn(login,password)" class="btn btn-primary btn-sm">Log in</a>
     <a  href="#!signin"  class="btn btn-primary btn-sm">Sign in</a>
+</p>
+
     </div>
    
 </div>    

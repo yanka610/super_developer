@@ -5,16 +5,19 @@
   width: 100%;
   height:100vh;
   color: rgb(231, 231, 231);
+border: 5px;
+border-color: black;
 }
 
 .login_form {
   position: relative;
   height: 200px;
   width: 300px;
-  top: calc((100vh/2) - 100px);
+  top: 150px;
   margin-left: auto;
   margin-right: auto;
   color: rgb(218, 215, 195);
+
 }
 .login_form h5{
   color:rgb(233, 233, 233);
@@ -50,5 +53,16 @@
     font-family:'jocke'; 
     src: url('stylesheets/fonts/jocke.ttf');
     }  */
+.menu{
+
+  display: inline;
+}
+
+    .change{
+      width: 100%;
+      background-color: teal;
+      height: 38px;
+    
+    }
 
   

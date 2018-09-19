@@ -5,6 +5,7 @@ exports.addUser = function(req, res) {
         var user = new User({
             name: req.body.name,
             surname: req.body.surname,
+            email:req.body.email,
             login: req.body.login,
             password: req.body.password
         });
@@ -26,23 +27,6 @@ exports.getUser = function(req, res) {
         console.log(result);
         res.send(result);
     })
-
-    // users.findOne({ 'name': "Yanka"}, function (doc){
-    //     res.send(doc);
-    //   });
-
-    // users.findOne().select('name').exec(function (err, p) {
-    //    res.send(p);
-    //   });
-
-
-   
-   //  user.findOne({name: 'Yanka'}, function(err,obj) { res.send(obj); });
-//console.log("dfgd");
-
-
-
-
 }
 
 exports.test = function(req, res) {
