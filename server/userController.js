@@ -22,7 +22,8 @@ exports.addUser = function(req, res) {
 
 exports.getUser = function(req, res) {
 
-    user.findOne({name: "Yanka"}).exec( function(result){
+    User.find({name: "Yanka"}).exec( function(err, result){
+        console.log(result);
         res.send(result);
     })
 

@@ -1,38 +1,14 @@
-<div  ng-controller="signinController">
-        <div class="registration" >
-
-                <div>
-                        <h1 style="text-align: center;" >Registration</h1>                
-                        <div style="padding-top: 15px">     
-                          <div class="row">
-                            <div class="col-sm-6" style="text-align: right;padding-right: 20px">
-                                    <p> Your login:  </p>
-                                    <p> Your password:  </p>
-                            </div>
-                            <div class="col-sm-6">
-                                    <input type="text" placeholder="login">
-                                    <input type="password" placeholder="password">
-                            </div>
-                          </div>
-                        </div>
-                        <p style="text-align: center"><input  type="checkbox" name="remember" id="">   Remember me</p>
-                        
-        
-                <a  href="#!main" class="btn btn-primary">Log in</a>
-                <a  href="#"  class="btn btn-primary">Sign in</a>
-                </div>
-               
-        </div>        
-</div>
-
-<div >
-        <input ng-model="userData.name"/>
-        name </br> 
-        <input ng-model="userData.surname"/>
-        surname </br>
-        <input ng-model="userData.login"/>
-        login </br>
-        <input ng-model="userData.password"/>
-        password </br>
-        <a  href="#" ng-click="getUser()" class="btn btn-primary">Save</a>
+<div ng-controller="signinController">
+        <div class="signin_main">
+                <input ng-model="userData.name"/>
+                name </br> 
+                <input ng-model="userData.surname"/>
+                surname </br>
+                <input ng-model="userData.login"/>
+                login </br>
+                <input ng-model="userData.password"/>
+                password </br>
+                <a  ng-click="addUser()" class="btn btn-primary">Save</a>
+                <a  ng-click="getUser()" class="btn btn-primary">Get</a>
+        </div>    
 </div>

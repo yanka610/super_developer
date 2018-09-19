@@ -2,24 +2,32 @@
 
 angular.module("myApp", ['ngRoute', 'main','car','description'])
 .config(function($routeProvider) {
-    $routeProvider.
-        when('/signin', {
+    $routeProvider
+        .when('/login', {
+            templateUrl: 'template/login.html',
+            controller: 'loginController'
+        })
+        .when('/signin', {
             templateUrl: 'template/signin.html',
             controller: 'signinController'
         })
         .otherwise({
-            redirectTo:'/signin'
+            redirectTo:'/login'
         })
 })
 
+.controller('loginController', function($rootScope, $scope, $http){
+
+})
+
 .controller("signinController", function($rootScope, $scope, $http){
-   $scope.registrationForm = false;
+   $scope.form = false;
    $scope.userData = {};
 
 
    $scope.signInForm = function() {
-        $scope.registrationForm = true;
-       
+        $scope.form = true;
+        setTimeout(function(){}, 2000);
    }
 
 
@@ -32,9 +40,7 @@ angular.module("myApp", ['ngRoute', 'main','car','description'])
    }
 
    $scope.getUser = function() {
-    $http({
-        method: 'GET',
-        url: '/getUser'}).then(function(result){
+    $http.get('/user', $scope.userData).then(function(result){
         console.log(result);
     });
    }
