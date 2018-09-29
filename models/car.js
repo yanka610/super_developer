@@ -7,7 +7,7 @@ var CarSchema = new Schema ({
     body_number: {type: String},
     car_make: {type: String},
     car_model: {type: String},
-    car_mileage: {type: Int32Array}
+    car_mileage: {type: String}
     
 })
 

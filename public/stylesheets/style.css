@@ -61,8 +61,11 @@ border-color: black;
     .change{
       width: 100%;
       background-color: teal;
-      height: 38px;
+      height: 40px;
     
+    }
+    img{
+      height: 40px
     }
 
   

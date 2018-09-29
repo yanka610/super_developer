@@ -12,13 +12,21 @@ angular.module("myApp", ['ngRoute', 'main','car','description','addClient'])
             controller: 'signinController'
         })
        
-        .otherwise({
-            redirectTo:'/login'
-        })
+        // .otherwise({
+        //     redirectTo:'/login'
+        // })
 })
 
 .controller('loginController', function($rootScope, $scope, $http){
+    $scope.data = {};
 
+    $scope.logIn = function() {
+        $http.post('/login', $scope.data).then(function(result){
+            if (result) {
+               window.location.href='#!/main';
+            }
+         });    
+    }
 })
 
 .controller("signinController", function($rootScope, $scope, $http){
@@ -34,7 +42,7 @@ angular.module("myApp", ['ngRoute', 'main','car','description','addClient'])
    }
 
 
-   $scope.addUser = function(login,password) {
+   $scope.addUser = function() {
       
     $http.post('/user', $scope.userData).then(function(result){
         console.log(result);

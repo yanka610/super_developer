@@ -21,8 +21,33 @@ exports.addUser = function(req, res) {
    }
 }
 
-exports.getUser = function(req, res) {
+exports.logIn = function(req, res) {
+    if (req.body) {
+        let data = req.body;
+        if (data.login) {
+            User.findOne({email: data.login}).exec(function(err, result) {
+                if (!err) {
+                    if (result && result.email === data.login && result.password === data.password) {
+                        
+                        res.send({msg: true})
+                       
+                    } else {
+                        res.send({msg: false})
+                    } 
+                } else {
+                    res.send({msg: false})
+                }
+            })
+        } else {
+            res.send({msg: false})
+        }
+    } else {
+        res.send({msg: false})
+    }
+}
 
+exports.getUser = function(req, res) {
+    
     User.find({name: "Yanka"}).exec( function(err, result){
         console.log(result);
         res.send(result);
